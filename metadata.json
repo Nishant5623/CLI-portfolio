@@ -1,0 +1,5 @@
+{
+  "name": "Terminal Portfolio",
+  "description": "A retro-styled developer portfolio simulating a command-line interface with a functional fake file system.",
+  "requestFramePermissions": []
+}
