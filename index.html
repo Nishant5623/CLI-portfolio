@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terminal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-bg: #00000066;
+        --color-text: #00ff00;
+        --color-prompt: #00ff00;
+        --color-link: #60a5fa;
+        --color-error: #ef4444;
+        --color-warning: #facc15;
+        --color-selection-bg: #00ff00;
+        --color-selection-text: #000000;
+        --color-text-glow: rgba(0, 255, 0, 0.5);
+      }
+
+      body {
+        /* Removed bg-black to avoid z-index stacking issues with negative indices */
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Prevent scroll on body, handle in App */
+      }
+
+      /* Custom scrollbar for Webkit */
+      ::-webkit-scrollbar {
+        width: 14px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(5, 5, 5, 0.3); 
+        border-left: none; /* Removed border line */
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: var(--color-text); 
+        border: 4px solid transparent;
+        background-clip: content-box;
+        border-radius: 9999px;
+        opacity: 0.5;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--color-link);
+        border: 3px solid transparent;
+      }
+      
+      /* Retro CRT flicker animation keyframes - Made very subtle */
+      @keyframes flicker {
+        0% { opacity: 0.99; }
+        5% { opacity: 0.98; }
+        10% { opacity: 0.99; }
+        15% { opacity: 0.98; }
+        20% { opacity: 1; }
+        25% { opacity: 0.99; }
+        30% { opacity: 0.98; }
+        35% { opacity: 0.99; }
+        40% { opacity: 1; }
+        45% { opacity: 0.98; }
+        50% { opacity: 0.99; }
+        55% { opacity: 0.98; }
+        60% { opacity: 0.99; }
+        65% { opacity: 1; }
+        70% { opacity: 0.99; }
+        75% { opacity: 0.98; }
+        80% { opacity: 0.99; }
+        85% { opacity: 0.98; }
+        90% { opacity: 0.99; }
+        95% { opacity: 1; }
+        100% { opacity: 0.99; }
+      }
+
+      .crt-flicker {
+        animation: flicker 0.3s infinite;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(18, 16, 16, 0.02); /* Extremely subtle tint */
+        z-index: 50;
+      }
+      
+      /* Scanline effect - Lines removed for smooth glass look */
+      .scanlines {
+        background: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 40;
+        pointer-events: none;
+        opacity: 0; /* Hidden to remove lines */
+      }
+
+      /* Glow effect for text */
+      .text-glow {
+        text-shadow: 0 0 5px var(--color-text-glow);
+      }
+
+      /* Liquid Glass Blob Animation */
+      @keyframes blob {
+        0% { transform: translate(0px, 0px) scale(1); }
+        33% { transform: translate(30px, -50px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+        100% { transform: translate(0px, 0px) scale(1); }
+      }
+      .animate-blob {
+        animation: blob 10s infinite; /* Slower animation for smoothness */
+      }
+      .animation-delay-2000 {
+        animation-delay: 2s;
+      }
+      .animation-delay-4000 {
+        animation-delay: 4s;
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="./assets/index-CbTN8c0I.js"></script>
+</head>
+  <body class="text-[var(--color-text)] font-mono h-screen w-screen selection:bg-[var(--color-selection-bg)] selection:text-[var(--color-selection-text)]">
+    <!-- Liquid Gradient Background -->
+    <div class="fixed inset-0 z-0 overflow-hidden bg-black">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[160px] opacity-70 animate-blob"></div>
+      <div class="absolute top-0 right-1/4 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-[160px] opacity-70 animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-32 left-1/3 w-96 h-96 bg-pink-600 rounded-full mix-blend-screen filter blur-[160px] opacity-70 animate-blob animation-delay-4000"></div>
+      <div class="absolute -bottom-40 right-1/3 w-80 h-80 bg-cyan-600 rounded-full mix-blend-screen filter blur-[140px] opacity-60 animate-blob"></div>
+    </div>
+    <div id="root" class="relative z-10"></div>
+</body>
+</html>

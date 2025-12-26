@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <title>Redirecting…</title>
+    <script>
+      // SPA fallback for GitHub Pages / static hosts.
+      // Load the built index.html and render it so client-side routing works.
+      fetch('./index.html')
+        .then(function(res){ return res.text(); })
+        .then(function(html){ document.open(); document.write(html); document.close(); })
+        .catch(function(){ location.replace('./'); });
+    </script>
+  </head>
+  <body></body>
+</html>
