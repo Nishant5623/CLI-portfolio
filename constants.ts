@@ -61,38 +61,108 @@ export const THEMES: Record<string, Record<string, string>> = {
 };
 
 export const INITIAL_FILES: FileSystem = {
-  'about.txt': `Hello! I'm Nishant. I am a 3rd-year B.Tech Computer Science student. I’m a builder at heart—I prefer creating functional tools and systems over just solving abstract puzzles.
+  'about.txt': `I am a third-year Computer Science student focused on building real-world software and DevOps projects. I enjoy solving practical problems and learning modern technologies through hands-on development.
 
-Core Interests: System Programming, Cybersecurity, and PC Architecture. 
-Current Goal: Strengthening my web development skills while mastering backend logic. 
-Off-duty: You’ll find me researching PC parts or gaming.`,
+I have experience working with Java, Data Structures, Linux, Git, and DevOps tools like Jenkins and Docker, and I am actively expanding my knowledge in cloud technologies and automation.
+
+I believe in creating projects that demonstrate real impact rather than just theoretical knowledge. My goal is to develop scalable and efficient systems while continuously improving as a software engineer.`,
   
-  'skills.txt': `[ Languages ]
-- Java .................... [ Proficient ]
-- Python / C .............. [ Proficient ]
-- JavaScript / HTML / CSS . [ Basic / Learning ]
+  'skills.txt': `SKILLS
 
-[ Cybersecurity & Systems ]
-- Network Security (NS3EDU Internship)
-- Linux System Administration
-- Docker Basics
+[ Programming ]
+- Java (OOP, Exception Handling, Collections)
+- C/C++ (Basic)
+- SQL
 
-[ Tools ]
-- Git / GitHub
-- Wireshark / Metasploit
-- VirtualBox / VMware`,
+[ DevOps & Tools ]
+- Git & GitHub
+- Jenkins (CI/CD Pipelines)
+- Docker (Containerization)
+- Linux Commands & Shell Basics
+
+[ Computer Science Fundamentals ]
+- Data Structures & Algorithms
+- Object-Oriented Programming
+- Database Management Systems
+- Operating Systems Basics
+- Computer Networks Basics
+
+[ Other Skills ]
+- Problem Solving
+- Debugging
+- Software Development Practices`,
   
-  'projects.txt': `01. Hospital Billing System
+  'projects.txt': `🔹 Hospital Billing System
+
 Language: Java
-Description: A management application built to handle patient data, billing calculations, and record-keeping. My first deep dive into object-oriented logic.
 
-02. Cybersecurity Internship (NS3EDU)
-Focus: Network Security & Vulnerability Assessment.
-Details: Worked with security protocols and tools to understand how systems are compromised and defended.
+Description:
+Developed a Java-based application to manage patient records and billing information. The system organizes patient details and calculates billing amounts using Object-Oriented Programming principles.
 
-03. Terminal Portfolio
-Status: In Progress
-Description: This interface! I'm using it to learn how web frontends interact with "system-like" logic.`,
+Key Features:
+- Patient information management
+- Billing calculation system
+- Structured data handling
+- Exception handling and validation
+
+Skills Gained:
+- Object-Oriented Programming
+- Java Application Development
+- Software Design Fundamentals
+
+🔹 Cybersecurity Internship – NS3EDU
+
+Focus: Network Security & Vulnerability Assessment
+
+Description:
+Completed a cybersecurity internship focused on understanding network vulnerabilities and security mechanisms. Learned how systems are attacked and how defensive measures protect data and networks.
+
+Key Areas:
+- Network Security Basics
+- Vulnerability Assessment
+- Security Protocols
+- Threat Awareness
+
+Skills Gained:
+- Basic Cybersecurity Concepts
+- Network Analysis
+- Security Practices
+
+🔹 Terminal Portfolio (In Progress)
+
+Description:
+Currently developing a terminal-style portfolio interface to present projects and technical skills. The project focuses on simulating command-line interaction using web technologies.
+
+Key Features:
+- Terminal-style interface
+- Interactive commands
+- Project navigation
+- Clean UI design
+
+Skills Gained:
+- Frontend Development
+- UI Design
+- Web Development Basics
+
+⭐ Very Important — Automated CI/CD Deployment Pipeline
+
+Description:
+Built a CI/CD pipeline using Jenkins to automate the process of building and deploying applications. The system automatically pulls code from GitHub and deploys it without manual steps.
+
+Technologies:
+- Jenkins
+- GitHub
+- Linux
+
+Key Features:
+- Automated deployment
+- Continuous Integration
+- Reduced manual work
+
+Skills Gained:
+- DevOps Fundamentals
+- CI/CD Pipelines
+- Automation`,
   
   'contact.txt': `Ready to collaborate on Web Dev or Security projects.
 
